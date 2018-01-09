@@ -18,7 +18,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static("public"));
 
 //require my route
-require("./routes/api-routes.js")(app);
+require("./routes/apiRoutes.js")(app);
 
 // Sync sequelize and start express
 db.sequelize.sync().then(function() {

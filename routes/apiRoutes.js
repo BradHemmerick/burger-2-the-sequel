@@ -2,7 +2,7 @@ const db = require("../models");
 
 module.exports = function(app) {
     app.get("/api/burgers", function(req, res) {
-        db.Todo.findAll({}).then(function(dbBurger) {
+        db.Burger.findAll().then(function(dbBurger) {
           res.json(dbBurger);
         });
       });
@@ -25,6 +25,7 @@ module.exports = function(app) {
           }
         })
         .then(function(dbBurger) {
+
           res.json(dbBurger);
         });
       });
